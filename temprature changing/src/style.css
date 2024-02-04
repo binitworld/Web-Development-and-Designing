@@ -1,0 +1,121 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #082f7e;
+    transition: background-color 0.5s ease;
+}
+h1{
+    font-size: 20px;
+}
+h1 span{
+    color: #c6f312;
+}
+body.cold {
+    background-color: #3498db;
+    color: #ffffff;
+}
+
+body.warm {
+    background-color: #f39c12;
+    color: #ffffff;
+}
+
+.container {
+    text-align: center;
+    transition: transform 0.5s ease, background-color 0.5s ease, color 0.5s ease;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    max-width: 1000px;
+    min-height: 50%;
+}
+
+.container:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: inherit;
+    border-radius: inherit;
+    filter: blur(10px);
+    opacity: 0.6;
+}
+#tempInput, #tempScale {
+    font-size: 16px; 
+    padding: 10px;
+    margin: 5px 0;
+    width: calc(80% - 22px);
+    border-radius: 8px; 
+    border: 1px solid #ccc;  
+    box-shadow:0 10px 20px rgba(0, 0, 0, 0.2); ;
+}
+
+form {
+    margin: 20px 0;
+}
+
+button {
+    cursor: pointer;
+    padding: 35px;
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    filter: drop-shadow(0 0 15px #0ef) drop-shadow(0 0 15px violet);
+}
+
+#result {
+    margin-top: 20px;
+    padding: 15px;
+    height: 50px;
+    border: 2px solid #0f186c;
+    border-radius: 8px;
+    background-color: #f78282;
+    transition: background-color 0.5s ease;
+}
+
+#result.cold {
+    background-color: #3498db;
+    color: #ffffff;
+}
+
+#result.warm {
+    background-color: #f39c12;
+    color: #ffffff;
+}
+
+.Last-text {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.Last-text h4 {
+    font-size: 20px;
+}
+
+.Last-text span {
+    color: #c6f312;
+}
+
+.Last-text:hover {
+    filter: drop-shadow(0 0 15px #0ef) drop-shadow(0 0 15px violet);
+}
+
+.Last-text:hover h4 {
+    color: #ffffff;
+}
